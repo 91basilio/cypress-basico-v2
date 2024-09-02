@@ -116,13 +116,13 @@ it('Verificar preencher e limpar campos', ()=>{
 })
 
 // Verificando que o comportamento padrão é que um link no Href será aberto quando tem no target _blank
-it.only('Verificar que o link abre em outra página sem clicar', () => {
+it('Verificar que o link abre em outra página sem clicar', () => {
   cy.get('#privacy a').should('have.attr', 'target', '_blank') 
 
 })
 
 // Clicando no link sem mudar de página. Tirando o atributo target
-  it.only('Verificar clicar no link sem sair da página', () => {
+  it('Verificar clicar no link sem sair da página', () => {
     cy.get('#privacy a')
     .invoke('removeAttr', 'target')
     .click()
